@@ -1,4 +1,4 @@
-Devel/Depend/CL version 0.01
+Devel/Depend/CL version 0.04
 ============================
 
 Perl extension for extracting dependency trees from c files using 'cl', microsoft's compiler.
