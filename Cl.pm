@@ -14,7 +14,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw() ] );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw($PreprocessorDepend);
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 NAME
 
@@ -138,7 +138,7 @@ for(@cpp_output)
 
 unless($include_system_includes)
 {
-	my @includes = split(';', $ENV{INCLUDE});
+	my @includes = defined $ENV{} ? split(';', $ENV{INCLUDE}) : () ;
 	for my $include (@includes)
 	{
 		$include =~ s|\\|/|g;
